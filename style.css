@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Montserrat&family=Neuton&display=swap');
+
+body {
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    background-color: #FAEBEA;
+    color: #000;
+    margin: 72px auto 40px auto;
+    width: 1400px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1,
+nav,
+footer {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Karla;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+}
+
+a {
+    color: #050726;
+    text-decoration: none;
+    margin: 0 0 0 38px;
+    transition: color 0.3s;
+}
+
+a:hover,
+a.selected {
+    color: #3038FF;
+}
+
+section {
+    margin: 120px 0 120px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px 32px;
+    grid-auto-flow: dense;
+}
+
+section h1 {
+    grid-column: 3 / span 9;
+    text-align: center;
+}
+
+section.project div.artwork {
+    grid-column: 1 / span 6;
+    text-align: center;
+}
+
+section.project div.description {
+    grid-column: 9 /span 4;
+    margin: 0 0 0 16px;
+}
+
+section.project img {
+    max-height: 640px;
+    max-width: 100%;
+}
+
+section.project-alt div.artwork {
+    grid-column: 6 / span 8;
+    text-align: right;
+}
+
+section.project-alt div.description {
+    grid-column: 1 /span 4;
+    margin: 0 0 0 16px;
+}
+
+section.about img {
+    max-height: 640px;
+    max-width: 100%;
+}
+
+section.about div.photo {
+    grid-column: 1 / span 6;
+}
+
+section.about div.description {
+    grid-column: 7 /span 6;
+}
+
+section.about h1 {
+    margin: 0 0 0 0;
+    text-align: left;
+}
+
+section.about p {
+    margin: 16px 0 16px 0;
+}
+
+section.contact div.form {
+    grid-column: 4 /span 6;
+}
+
+section.contact h1 {
+    text-align: left;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    margin: 0 16px 0 16px;
+}
+
+input,
+textarea {
+    width: calc(100% - 24px);
+    background-color: #FAEBEA;
+    border: 2px solid #050726;
+    color: #050726;
+    padding: 8px 16px 8px 16px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 16px 0;
+}
+
+textarea {
+    height: 320px;
+}
+
+button {
+    background-color: #14B869;
+    color: #FAEBEA;
+    border: none;
+    font-size: 24px;
+    font-family: Montserrat;
+    padding: 8px 16px 8px 16px;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #FAEBEA;
+}
+
+@media (max-width: 1400px) {
+    body {
+        width: auto;
+        margin: 72px auto 40px auto;
+    }
+
+    h1,
+    nav,
+    footer {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 920px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin: 24px 0 0 0;
+    }
+
+    header img {
+        max-width: 300px;
+    }
+
+    header a {
+        margin: 0 16px 0 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px 24px;
+        padding: 0 24px;
+    }
+
+    section h1,
+    section.project div.artwork,
+    section.project div.description,
+    section.about div.photo,
+    section.about div.description,
+    section.contact div.form {
+        grid-column: 1 / span 4;
+    }
+}
+
+@media (max-width: 400px) {
+
+    body {
+        margin: 24px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
